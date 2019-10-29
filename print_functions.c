@@ -4,7 +4,7 @@
 
 /**
  * p_char - prints character c
- * @arg: character to print
+ * @arg: variable of type va_list
  * Return: number of printed chars
  */
 int p_char(va_list arg)
