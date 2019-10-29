@@ -1,0 +1,34 @@
+.TH _printf 1 "28 October 2019" "0.01" "_printf user command"
+.SH NAME
+.B _printf
+- format and prints data after conversion
+.SH SYNOPSIS
+#include "holberton.h"
+.br
+\fIint\fR
+.br
+.B _printf (\fIconst\fR \fIchar\fR \fI*format\fR, \fI...\fR);
+.SH DESCRIPTION
+The _printf() function produces output according to specified format.
+.SH CONVERSION SPECIFIERS
+The conversion specifiers in _printf():
+.TP
+.BR c
+The  int argument is converted to an unsigned char
+.TP
+.B s
+the *s is pointer to character expected to be string or array of characters, used for strings.
+.TP
+.B %
+A  `%'  is  written.  No argument is converted. The complete conversion specification is `%%'.
+.TP
+.B d,i
+The  int    argument is converted to signed decimal notation.  The precision, if any, gives the minimum number of digits that  must appear;  if  the converted  value  requires fewer digits, it is padded on the left with zeros. The default precision is 1.  When 0  is printed with an explicit precision 0, the output is empty.
+.SH RETURN VALUE
+Upon successful return, this function returns the number of characters printed (not including the trailing `\\0' used to end output to strings).
+.SH SEE ALSO
+printf(3)
+.SH BUGS
+No known bugs.
+.SH AUTHOR
+Yassine Chayrrou, Ahmed Kousay Dellai.
