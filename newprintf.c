@@ -2,12 +2,11 @@
 #include <stdarg.h>
 #include "holberton.h"
 /**
- * _printf - replicant of printf of stdio.h
+ * _printf - prints an output according to a format specifier
  * @format: character string
- * Return: number of characters printed without null byte
+ * Return: number of characters printed excluding null byte
  */
 int _printf(const char *format, ...)
-{
 	va_list arg;
 	unsigned int i, j, flag;
 	unsigned int len = 0;
@@ -26,6 +25,7 @@ int _printf(const char *format, ...)
 		if (format[i] == '%' && format[i + 1] != '%')
 		{
 			j = 0;
+			flag = 0;
 			while (print[j].p != NULL)
 			{
 				if (format[i + 1] == print[j].print[0])
@@ -35,6 +35,11 @@ int _printf(const char *format, ...)
 					i++;
 				}
 				j++;
+			}
+			if (flag == 0)
+			{
+				_putchar(format[i]);
+				len = len + 1;
 			}
 		}
 		else if (format[i] == '%' && format[i + 1] == '%')
@@ -51,5 +56,6 @@ int _printf(const char *format, ...)
 		i++;
 	}
 	va_end(arg);
+
 	return (len);
 }
