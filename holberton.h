@@ -2,7 +2,7 @@
 #define HOLBERTON_H
 #include <stdarg.h>
 /**
- * struct print - defines type print_t
+ * struct print - defines type print_t that containes a char and pointer func
  * @print: pointer to char
  * @p: function pointer
  *
