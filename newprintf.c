@@ -1,9 +1,9 @@
 #include <stdlib.h>
 #include "holberton.h"
 /**
- * _printf - replicant of printf of stdio.h
+ * _printf - produces output according to a format
  * @format: character string
- * Return: number of characters printed without null byte
+ * Return: number of characters printed excluding null byte
  */
 int _printf(const char *format, ...)
 {
